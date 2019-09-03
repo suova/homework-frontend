@@ -1,8 +1,9 @@
 'use strict';
-let sorting = (arr, fields) => {
+const sorting = (elems, fields) => {
     for(let i = fields.length-1; i >= 0; i--) {
-        arr.sort( (a, b) => a[fields[i]] >= b[fields[i]] ? 1 : -1 );
+        elems.sort((elem1, elem2) => elem1[fields[i]] >= elem2[fields[i]] ? 1 : -1);
     }
-     
-    return arr;
+
+    return elems;
 };
+
